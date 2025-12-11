@@ -29,7 +29,7 @@ body::before {
   height: 100%;
   z-index: -1; 
   
-  background-image: url('/public/imagens/batata_queijo.jpg'); 
+  background-image: url('/imagens/batata_queijo.jpg'); 
   background-size: cover;
   background-position: center;
   
