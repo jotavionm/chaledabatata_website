@@ -1,27 +1,3 @@
-.twinkle-star-regular {
-  font-family: "Twinkle Star", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.short-stack-regular {
-  font-family: "Short Stack", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  margin: 30px;
-  max-width: 700px;
-}
-
 :root {
   --marrom: #8E5841;
   --amarelo: #FFCC02;
@@ -30,50 +6,108 @@ main {
 }
 
 * {
-  font-family: "Twinkle Star", cursive;
-  font-weight: 400;
-  font-style: normal;
+  box-sizing: border-box;
 }
 
-.apresentacao {
-  text-align: center;
-  flex: 1;
-  font-size: 50px;
-  background-color: var(--amarelo);
-  color: var(--marrom);
-  border-radius: 50px;
-  padding: 20px;
-}
-
-.logo {
-  flex: 1;
-  border: 3px solid var(--marrom);
+body {
+  margin: 0;
+  padding: 0;
   background-color: var(--areia);
-  margin: 30px 0;
-  padding: 100px;
-  border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%;
-}
-
-.botoes {
-  flex: 1;
-  border: 3px solid var(--marrom);
-}
-
-.botoes div {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
   font-family: "Short Stack", cursive;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
 }
 
-.botoes button {
-  font-family: "Short Stack", cursive;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
+main {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.logo-principal {
+/* APRESENTAÇÃO: Adicionei uma borda inferior amarela para trazer a cor de volta */
+.apresentacao {
+  font-family: "Twinkle Star", cursive;
+  font-size: 3rem;
+  color: var(--marrom);
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  border-bottom: 4px dashed var(--amarelo); /* Detalhe sutil em amarelo */
+  padding-bottom: 10px;
+  display: inline-block; /* Para a borda ficar do tamanho do texto */
+}
+
+.logo-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-batata {
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  border: 4px solid var(--marrom);
+  /* Formato de batata */
+  border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 0px var(--amarelo); /* Sombra sólida amarela para destaque */
+}
+
+.logo-img {
+  width: 85%;
+  height: auto;
+}
+
+.links-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.secao-titulo {
+  color: var(--marrom);
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* BOTÕES: Agora usando o AMARELO como cor principal */
+.btn-link {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--amarelo); /* Fundo Amarelo */
+  color: var(--marrom); /* Texto Marrom para contraste */
+  border: 2px solid var(--marrom); /* Borda para definição */
+  border-radius: 50px;
+  font-family: "Short Stack", cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 0 rgba(142, 88, 65, 0.2);
+}
+
+/* HOVER: Fica Laranja ao passar o mouse */
+.btn-link:hover {
+  background-color: var(--laranja);
+  color: var(--areia);
+  border-color: var(--laranja);
+  transform: translateY(-2px); /* Efeito de elevação */
+  box-shadow: 0 6px 0 rgba(142, 88, 65, 0.2);
+}
+
+.btn-link:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
