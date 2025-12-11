@@ -17,24 +17,25 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: "Short Stack", cursive;
-  position: relative;
+  position: relative; 
 }
 
-/* VIDEO BACKGROUND:
-   Esta classe controla a tag <video> que colocamos no HTML.
-*/
-.video-fundo {
-  position: fixed;
+body::before {
+  content: "";
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz o vídeo cobrir a tela sem esticar */
-  z-index: -1; /* Joga para trás de tudo */
+  z-index: -1; 
   
-  /* EFEITOS: */
-  filter: blur(4px); 
-  opacity: 0.5; 
+  background-image: url('/public/imagens/batata_queijo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  
+
+  filter: blur(4px); /* Desfoca a imagem */
+  opacity: 0.5; /* Deixa a imagem meio transparente para não brigar com o texto */
 }
 
 main {
@@ -46,7 +47,6 @@ main {
   align-items: center;
 }
 
-/* APRESENTAÇÃO */
 .apresentacao {
   font-family: "Twinkle Star", cursive;
   font-size: 3rem;
@@ -54,9 +54,9 @@ main {
   text-align: center;
   margin-bottom: 20px;
   line-height: 1.2;
-  border-bottom: 4px dashed var(--amarelo); 
+  border-bottom: 4px dashed var(--amarelo); /* Detalhe sutil em amarelo */
   padding-bottom: 10px;
-  display: inline-block; 
+  display: inline-block; /* Para a borda ficar do tamanho do texto */
 }
 
 .logo-container {
@@ -76,7 +76,7 @@ main {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 8px 0px var(--amarelo); 
+  box-shadow: 0 8px 0px var(--amarelo); /* Sombra sólida amarela para destaque */
 }
 
 .logo-img {
@@ -100,13 +100,12 @@ main {
   font-weight: bold;
 }
 
-/* BOTÕES */
 .btn-link {
   width: 100%;
   padding: 16px;
-  background-color: var(--amarelo); 
-  color: var(--marrom); 
-  border: 2px solid var(--marrom); 
+  background-color: var(--amarelo); /* Fundo Amarelo */
+  color: var(--marrom); /* Texto Marrom para contraste */
+  border: 2px solid var(--marrom); /* Borda para definição */
   border-radius: 50px;
   font-family: "Short Stack", cursive;
   font-size: 1.2rem;
@@ -116,11 +115,12 @@ main {
   box-shadow: 0 4px 0 rgba(142, 88, 65, 0.2);
 }
 
+/* HOVER: Fica Laranja ao passar o mouse */
 .btn-link:hover {
   background-color: var(--laranja);
   color: var(--areia);
   border-color: var(--laranja);
-  transform: translateY(-2px); 
+  transform: translateY(-2px); /* Efeito de elevação */
   box-shadow: 0 6px 0 rgba(142, 88, 65, 0.2);
 }
 
