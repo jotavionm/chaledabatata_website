@@ -17,25 +17,27 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: "Short Stack", cursive;
-  position: relative; 
+  position: relative;
 }
 
 body::before {
   content: "";
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; 
-  
-  background-image: url('/imagens/batata_queijo.jpg'); 
+  z-index: -1;
+
+  background-image: url('/imagens/batata_queijo.jpg');
   background-size: cover;
   background-position: center;
-  
 
-  filter: blur(4px); /* Desfoca a imagem */
-  opacity: 0.5; /* Deixa a imagem meio transparente para não brigar com o texto */
+
+  filter: blur(4px);
+  /* Desfoca a imagem */
+  opacity: 0.5;
+  /* Deixa a imagem meio transparente para não brigar com o texto */
 }
 
 main {
@@ -54,9 +56,11 @@ main {
   text-align: center;
   margin-bottom: 20px;
   line-height: 1.2;
-  border-bottom: 4px dashed var(--amarelo); /* Detalhe sutil em amarelo */
+  border-bottom: 4px dashed var(--amarelo);
+  /* Detalhe sutil em amarelo */
   padding-bottom: 10px;
-  display: inline-block; /* Para a borda ficar do tamanho do texto */
+  display: inline-block;
+  /* Para a borda ficar do tamanho do texto */
 }
 
 .logo-container {
@@ -76,7 +80,8 @@ main {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 8px 0px var(--amarelo); /* Sombra sólida amarela para destaque */
+  box-shadow: 0 8px 0px var(--amarelo);
+  /* Sombra sólida amarela para destaque */
 }
 
 .logo-img {
@@ -103,9 +108,12 @@ main {
 .btn-link {
   width: 100%;
   padding: 16px;
-  background-color: var(--amarelo); /* Fundo Amarelo */
-  color: var(--marrom); /* Texto Marrom para contraste */
-  border: 2px solid var(--marrom); /* Borda para definição */
+  background-color: var(--amarelo);
+  /* Fundo Amarelo */
+  color: var(--marrom);
+  /* Texto Marrom para contraste */
+  border: 2px solid var(--marrom);
+  /* Borda para definição */
   border-radius: 50px;
   font-family: "Short Stack", cursive;
   font-size: 1.2rem;
@@ -120,11 +128,37 @@ main {
   background-color: var(--laranja);
   color: var(--areia);
   border-color: var(--laranja);
-  transform: translateY(-2px); /* Efeito de elevação */
+  transform: translateY(-2px);
+  /* Efeito de elevação */
   box-shadow: 0 6px 0 rgba(142, 88, 65, 0.2);
 }
 
 .btn-link:active {
   transform: translateY(0);
   box-shadow: none;
+}
+
+.rodape {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+}
+
+.rodape a {
+  color: var(--marrom);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* Espaço entre o ícone e o texto */
+  transition: color 0.2s;
+  opacity: 0.8;
+  /* Um pouco mais suave que o texto principal */
+}
+
+.rodape a:hover {
+  color: var(--laranja);
+  opacity: 1;
 }
